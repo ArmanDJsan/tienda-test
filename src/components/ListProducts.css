@@ -1,0 +1,12 @@
+
+.product-box {
+    display: flex;
+    color: #d26b6b;
+}
+th {
+    background-color: #5c07ef;
+}
+td {
+    border: 1px solid #5c07ef;
+    overflow: hidden;
+}

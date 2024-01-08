@@ -25,15 +25,21 @@ body {
   
   .product-info {
     float: left;
-    height: 420px;
-    width: 327px;
+    height: 200px;
+    width: 200px;
     border-radius: 0 7px 10px 7px;
     background-color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   
   .product-text {
-    height: 300px;
-    width: 327px;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   
   .product-text h1 {
