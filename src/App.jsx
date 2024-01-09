@@ -1,13 +1,19 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import ListProducts from './components/ListProducts'
+import Cart from './components/Cart';
 import './App.css'
 
+export const ConText = React.createContext();
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [cart, setCart] = useState([])
 
   return (
     <>
-     <ListProducts/>
+      <ConText.Provider value={[cart, setCart]}>
+        <ListProducts />
+        <Cart/>
+      </ConText.Provider>
     </>
   )
 }
