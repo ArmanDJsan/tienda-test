@@ -29,12 +29,11 @@ const ListProducts = () => {
     const subs = (item) => {
         const index = cart.findIndex((elemento) => elemento.product.id === item.id);
         let aux = [...cart];
-        if(aux[index].qty>1)
-        {
+        if (aux[index].qty > 1) {
             setCart(aux[index].qty--);
         }
-        else{
-            setCart(aux.toSpliced(index,1));
+        else {
+            setCart(aux.toSpliced(index, 1));
         }
     }
 
@@ -42,22 +41,28 @@ const ListProducts = () => {
         const index = cart.findIndex((elemento) => elemento.product.id === item.id);
         let aux = [...cart];
         if (index >= 0) {
-          aux[index].qty++;
+            aux[index].qty++;
         } else {
-          aux.push({'product': item, 'qty': 1});
+            aux.push({ 'product': item, 'qty': 1 });
         }
         console.log(aux);
         setCart(aux);
     }
     return (
-        <>
+        <div id="container">
             <div id="price-filter">
-                <label htmlFor="from">from</label>
-                <input id="from" type="text" />
-                <label htmlFor="to">to</label>
-                <input id="to" type="text" />
-                <button type="button" onClick={filter}>filtrar</button>
-                <button type="button" onClick={restore}>restore</button>
+                <div>
+                    <label htmlFor="from">from</label>
+                    <input id="from" type="text" />
+                </div>
+                <div>
+                    <label htmlFor="to">to</label>
+                    <input id="to" type="text" />
+                </div>
+                <div>
+                    <button type="button" onClick={filter}>filtrar</button>
+                    <button type="button" onClick={restore}>restore</button>
+                </div>
             </div>
             <table>
                 <thead>
@@ -79,14 +84,13 @@ const ListProducts = () => {
                             <td>{product.title}</td>
                             <td>
                                 <p>{product.price}$</p>
-                                <button type="button" onClick={restore}>restore</button>
                                 <button type="button" onClick={() => addToCart(product)}>buy</button>
                             </td>
                         </tr>
                     )}
                 </tbody >
             </table>
-        </>
+        </div>
     )
 }
 export default ListProducts

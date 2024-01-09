@@ -1,4 +1,7 @@
+#container{
+    display: flex;
 
+}
 .product-box {
     display: flex;
     color: #d26b6b;
@@ -12,5 +15,15 @@ td {
 }
 
 #price-filter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #5c07ef;
+    height: 125px;
+    width: 300px;
+}
+
+table{
+    margin: 0 2px 0  2px;
 }
