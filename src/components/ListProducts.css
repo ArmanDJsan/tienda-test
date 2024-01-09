@@ -10,3 +10,7 @@ td {
     border: 1px solid #5c07ef;
     overflow: hidden;
 }
+
+#price-filter{
+    border: 1px solid #5c07ef;
+}
