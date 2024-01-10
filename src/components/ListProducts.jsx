@@ -1,6 +1,7 @@
+import React from 'react'
 import { useState, useEffect, useContext } from "react";
-import './ListProducts.css'
 import { ConText } from "../App";
+import './ListProducts.css'
 
 const ListProducts = () => {
     const [products, setProducts] = useState([])
@@ -45,7 +46,6 @@ const ListProducts = () => {
         } else {
             aux.push({ 'product': item, 'qty': 1 });
         }
-        console.log(aux);
         setCart(aux);
     }
     return (

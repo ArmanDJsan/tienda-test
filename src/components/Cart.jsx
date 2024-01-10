@@ -1,3 +1,4 @@
+import React from 'react'
 import { useContext } from "react";
 import { ConText } from "../App";
 import './Cart.css';
@@ -47,7 +48,6 @@ const Cart = () => {
     const cartTotal = () => {
         const initialValue = 0;
         const total = cart.reduce((accumulator, currentValue) =>  accumulator + itemTotal(currentValue), initialValue);
-        console.log(`total: ${total}`);
         return total;
     }
 

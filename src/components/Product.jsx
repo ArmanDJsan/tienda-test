@@ -1,4 +1,4 @@
-
+import './Products.css'
 const Product = ({product}) => {
 
 return (
